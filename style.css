@@ -98,9 +98,20 @@ body {
   min-width: 0;
 }
 
-.about-section {
+.page-view {
+  display: none;
+}
+
+.page-view.active {
+  display: block;
+}
+
+.about-section.active {
   display: flex;
-  align-items: center;
+}
+
+.about-section {
+  align-items: flex-start;
   gap: 3rem;
   flex-wrap: wrap;
   padding-bottom: 2rem;
@@ -122,7 +133,6 @@ body {
 
 .page-section {
   padding: 2rem 0;
-  border-top: 1px solid var(--border);
 }
 
 .page-section h2 {
