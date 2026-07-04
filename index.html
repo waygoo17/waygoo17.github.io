@@ -7,107 +7,121 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Your Name</h1>
-      <nav>
-        <a href="#about">About</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <a href="#about" class="sidebar-name">your name</a>
+      <nav class="side-nav">
+        <a href="#about" class="active">About</a>
         <a href="#projects">Projects</a>
         <a href="#pictures">Pictures</a>
         <a href="#videos">Videos</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="hero container">
-      <img
-        class="profile-pic"
-        src="https://github.com/waygoo17.png"
-        alt="Photo of Your Name"
-        width="160"
-        height="160"
-      />
-      <h2>Hi, I'm Your Name 👋</h2>
-      <p class="tagline">A short tagline about what you do — e.g. "Software engineer building useful things."</p>
-      <p class="bio">
-        Write a short bio here. Talk about your background, interests, and what
-        you're passionate about. Keep it to a few sentences — this is a quick
-        introduction, not a full resume.
-      </p>
-    </section>
-
-    <section id="projects" class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of what this project does and what you used to build it.</p>
-          <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="project-card">
-          <h3>Project Two</h3>
-          <p>A short description of what this project does and what you used to build it.</p>
-          <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="project-card">
-          <h3>Project Three</h3>
-          <p>A short description of what this project does and what you used to build it.</p>
-          <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
+      <div class="sidebar-icons">
+        <a href="https://github.com/waygoo17" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="mailto:you@example.com" aria-label="Email">✉</a>
       </div>
-    </section>
+    </aside>
 
-    <section id="pictures" class="container">
-      <h2>Pictures</h2>
-      <div class="media-grid">
-        <figure class="media-card">
-          <div class="placeholder-box">📷</div>
-          <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
-        </figure>
-        <figure class="media-card">
-          <div class="placeholder-box">📷</div>
-          <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
-        </figure>
-        <figure class="media-card">
-          <div class="placeholder-box">📷</div>
-          <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
-        </figure>
-      </div>
-    </section>
+    <main class="content">
+      <section id="about" class="about-section">
+        <div class="about-text">
+          <p>
+            <strong>Your Name</strong> is a [your role] and [what you do],
+            based in [your city].
+          </p>
+          <p>
+            Write a paragraph about your work, projects, or focus area.
+            Mention anything notable — accomplishments, publications, or
+            products you've built.
+          </p>
+          <p>
+            Add another paragraph about your background, interests, or how
+            you got started.
+          </p>
+          <p>
+            Wrap up with a personal note — where you live, what you're
+            currently working on, or what's next for you.
+          </p>
+        </div>
+        <img
+          class="profile-pic"
+          src="https://github.com/waygoo17.png"
+          alt="Photo of Your Name"
+          width="260"
+          height="260"
+        />
+      </section>
 
-    <section id="videos" class="container">
-      <h2>Videos</h2>
-      <div class="media-grid">
-        <figure class="media-card">
-          <div class="placeholder-box">🎬</div>
-          <figcaption>Add a video — embed a YouTube link or replace with your own video.</figcaption>
-        </figure>
-        <figure class="media-card">
-          <div class="placeholder-box">🎬</div>
-          <figcaption>Add a video — embed a YouTube link or replace with your own video.</figcaption>
-        </figure>
-      </div>
-    </section>
+      <section id="projects" class="page-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p>A short description of what this project does and what you used to build it.</p>
+            <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p>A short description of what this project does and what you used to build it.</p>
+            <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+          <article class="project-card">
+            <h3>Project Three</h3>
+            <p>A short description of what this project does and what you used to build it.</p>
+            <a href="https://github.com/waygoo17" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+        </div>
+      </section>
 
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>Get in touch, or find me around the web:</p>
-      <ul class="contact-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://github.com/waygoo17" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></li>
-      </ul>
-    </section>
-  </main>
+      <section id="pictures" class="page-section">
+        <h2>Pictures</h2>
+        <div class="media-grid">
+          <figure class="media-card">
+            <div class="placeholder-box">📷</div>
+            <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <div class="placeholder-box">📷</div>
+            <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <div class="placeholder-box">📷</div>
+            <figcaption>Add a photo — replace this placeholder with your own image.</figcaption>
+          </figure>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Your Name. Built with GitHub Pages.</p>
-    </div>
-  </footer>
+      <section id="videos" class="page-section">
+        <h2>Videos</h2>
+        <div class="media-grid">
+          <figure class="media-card">
+            <div class="placeholder-box">🎬</div>
+            <figcaption>Add a video — embed a YouTube link or replace with your own video.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <div class="placeholder-box">🎬</div>
+            <figcaption>Add a video — embed a YouTube link or replace with your own video.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="contact" class="page-section">
+        <h2>Contact</h2>
+        <p>Get in touch, or find me around the web:</p>
+        <ul class="contact-links">
+          <li><a href="mailto:you@example.com">Email</a></li>
+          <li><a href="https://github.com/waygoo17" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Your Name. Built with GitHub Pages.</p>
+      </footer>
+    </main>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
