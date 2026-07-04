@@ -11,7 +11,7 @@
     <aside class="sidebar">
       <a href="#about" class="sidebar-name">your name</a>
       <nav class="side-nav">
-        <a href="#about" class="active">About</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#pictures">Pictures</a>
         <a href="#videos">Videos</a>
@@ -37,7 +37,7 @@
     </aside>
 
     <main class="content">
-      <section id="about" class="about-section">
+      <section id="about" class="page-view about-section active">
         <div class="about-text">
           <p>
             <strong>Your Name</strong> is a [your role] and [what you do],
@@ -61,12 +61,12 @@
           class="profile-pic"
           src="https://github.com/waygoo17.png"
           alt="Photo of Your Name"
-          width="260"
-          height="260"
+          width="220"
+          height="220"
         />
       </section>
 
-      <section id="projects" class="page-section">
+      <section id="projects" class="page-view page-section">
         <h2>Projects</h2>
         <div class="projects-grid">
           <article class="project-card">
@@ -87,7 +87,7 @@
         </div>
       </section>
 
-      <section id="pictures" class="page-section">
+      <section id="pictures" class="page-view page-section">
         <h2>Pictures</h2>
         <div class="media-grid">
           <figure class="media-card">
@@ -105,7 +105,7 @@
         </div>
       </section>
 
-      <section id="videos" class="page-section">
+      <section id="videos" class="page-view page-section">
         <h2>Videos</h2>
         <div class="media-grid">
           <figure class="media-card">
@@ -119,7 +119,7 @@
         </div>
       </section>
 
-      <section id="contact" class="page-section">
+      <section id="contact" class="page-view page-section">
         <h2>Contact</h2>
         <p>Get in touch, or find me around the web:</p>
         <ul class="contact-links">
@@ -138,6 +138,28 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navLinks = document.querySelectorAll('.side-nav a, .sidebar-name');
+    const views = document.querySelectorAll('.page-view');
+
+    function showSection(id) {
+      if (!document.getElementById(id)) id = 'about';
+      views.forEach((section) => section.classList.toggle('active', section.id === id));
+      document.querySelectorAll('.side-nav a').forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = link.getAttribute('href').slice(1);
+        showSection(id);
+        history.replaceState(null, '', '#' + id);
+      });
+    });
+
+    showSection((location.hash || '#about').slice(1));
   </script>
 </body>
 </html>
