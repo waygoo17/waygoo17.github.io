@@ -6,7 +6,7 @@
   --accent: #3b5bdb;
   --card: #f9f9f9;
   --border: #e5e5e5;
-  --sidebar-width: 220px;
+  --sidebar-width: 340px;
 }
 
 * {
@@ -66,7 +66,7 @@ body {
 
 .sidebar-icons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.8rem;
   margin-top: 1.5rem;
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .sidebar-icons a[aria-label="Email"] {
-  background: linear-gradient(135deg, #ef4444, #f97316);
+  background: linear-gradient(135deg, #4447ef, #f97316);
 }
 
 .sidebar-icons a[aria-label="GitHub"] {
@@ -105,7 +105,7 @@ body {
 }
 
 .sidebar-icons a[aria-label="LinkedIn"] {
-  background: linear-gradient(135deg, #0a66c2, #38bdf8);
+  background: linear-gradient(135deg, #06427e, #053f58);
 }
 
 .sidebar-icons a[aria-label="Twitter/X"] {
